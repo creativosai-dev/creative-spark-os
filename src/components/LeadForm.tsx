@@ -57,10 +57,10 @@ const LeadForm = ({ onSuccess, variant = "modal" }: LeadFormProps) => {
   if (isSubmitted) {
     return (
       <div className="text-center py-8">
-        <div className="w-16 h-16 mx-auto rounded-full bg-primary/10 flex items-center justify-center mb-4">
-          <CheckCircle2 className="w-8 h-8 text-primary" />
+        <div className="w-16 h-16 mx-auto rounded-full bg-foreground flex items-center justify-center mb-4">
+          <CheckCircle2 className="w-8 h-8 text-background" />
         </div>
-        <h3 className="text-xl font-semibold mb-2">You're on the list!</h3>
+        <h3 className="text-xl font-bold mb-2">You're on the list!</h3>
         <p className="text-muted-foreground">
           Thanks — we'll email you within 2 business days.
         </p>
@@ -71,12 +71,12 @@ const LeadForm = ({ onSuccess, variant = "modal" }: LeadFormProps) => {
   return (
     <form onSubmit={handleSubmit(onSubmit)} className="space-y-5">
       <div className="space-y-2">
-        <Label htmlFor="name">Name *</Label>
+        <Label htmlFor="name" className="font-semibold">Name *</Label>
         <Input
           id="name"
           placeholder="Your name"
           {...register("name")}
-          className={errors.name ? "border-destructive" : ""}
+          className={`h-12 rounded-lg ${errors.name ? "border-destructive" : ""}`}
         />
         {errors.name && (
           <p className="text-sm text-destructive">{errors.name.message}</p>
@@ -84,13 +84,13 @@ const LeadForm = ({ onSuccess, variant = "modal" }: LeadFormProps) => {
       </div>
 
       <div className="space-y-2">
-        <Label htmlFor="email">Email *</Label>
+        <Label htmlFor="email" className="font-semibold">Email *</Label>
         <Input
           id="email"
           type="email"
           placeholder="you@agency.com"
           {...register("email")}
-          className={errors.email ? "border-destructive" : ""}
+          className={`h-12 rounded-lg ${errors.email ? "border-destructive" : ""}`}
         />
         {errors.email && (
           <p className="text-sm text-destructive">{errors.email.message}</p>
@@ -98,12 +98,12 @@ const LeadForm = ({ onSuccess, variant = "modal" }: LeadFormProps) => {
       </div>
 
       <div className="space-y-2">
-        <Label htmlFor="agencyName">Agency Name *</Label>
+        <Label htmlFor="agencyName" className="font-semibold">Agency Name *</Label>
         <Input
           id="agencyName"
           placeholder="Your agency"
           {...register("agencyName")}
-          className={errors.agencyName ? "border-destructive" : ""}
+          className={`h-12 rounded-lg ${errors.agencyName ? "border-destructive" : ""}`}
         />
         {errors.agencyName && (
           <p className="text-sm text-destructive">{errors.agencyName.message}</p>
@@ -111,12 +111,12 @@ const LeadForm = ({ onSuccess, variant = "modal" }: LeadFormProps) => {
       </div>
 
       <div className="space-y-2">
-        <Label htmlFor="location">Location (City, State) *</Label>
+        <Label htmlFor="location" className="font-semibold">Location (City, State) *</Label>
         <Input
           id="location"
           placeholder="Mumbai, Maharashtra"
           {...register("location")}
-          className={errors.location ? "border-destructive" : ""}
+          className={`h-12 rounded-lg ${errors.location ? "border-destructive" : ""}`}
         />
         {errors.location && (
           <p className="text-sm text-destructive">{errors.location.message}</p>
@@ -124,18 +124,19 @@ const LeadForm = ({ onSuccess, variant = "modal" }: LeadFormProps) => {
       </div>
 
       <div className="space-y-2">
-        <Label htmlFor="monthlyAdSpend">Monthly Ad Spend (optional)</Label>
+        <Label htmlFor="monthlyAdSpend" className="font-semibold">Monthly Ad Spend (optional)</Label>
         <Input
           id="monthlyAdSpend"
           placeholder="₹50,000"
           {...register("monthlyAdSpend")}
+          className="h-12 rounded-lg"
         />
-        <p className="text-xs text-muted-foreground">Numbers only, helps us understand your scale</p>
+        <p className="text-xs text-muted-foreground">Helps us understand your scale</p>
       </div>
 
       <Button 
         type="submit" 
-        variant={variant === "modal" ? "hero" : "default"} 
+        variant="hero" 
         size="lg" 
         className="w-full"
         disabled={isLoading}

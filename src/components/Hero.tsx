@@ -8,29 +8,22 @@ interface HeroProps {
 
 const Hero = ({ onOpenForm }: HeroProps) => {
   return (
-    <section className="relative min-h-screen hero-gradient overflow-hidden">
-      {/* Background gradient orbs */}
-      <div className="absolute inset-0 overflow-hidden">
-        <div className="absolute -top-40 -right-40 w-96 h-96 bg-primary/10 rounded-full blur-3xl" />
-        <div className="absolute top-1/2 -left-40 w-80 h-80 bg-primary/5 rounded-full blur-3xl" />
-      </div>
-
+    <section className="relative min-h-screen bg-background overflow-hidden">
       <div className="section-container relative z-10">
-        <div className="flex flex-col lg:flex-row items-center justify-between gap-12 pt-24 pb-16 lg:pt-32 lg:pb-24">
+        <div className="flex flex-col lg:flex-row items-center justify-between gap-16 pt-28 pb-20 lg:pt-36 lg:pb-28">
           {/* Left content */}
           <div className="flex-1 text-center lg:text-left max-w-2xl">
             <div className="animate-fade-in">
-              <p className="text-primary font-medium text-sm uppercase tracking-wider mb-4">
-                The Creative Operating System for Agencies
+              <p className="text-sm font-semibold uppercase tracking-widest text-muted-foreground mb-6">
+                The Creative OS for Agencies
               </p>
-              <h1 className="text-4xl sm:text-5xl lg:text-6xl font-bold leading-tight mb-6">
-                <span className="text-gradient">CreativOS</span>
+              <h1 className="display-text mb-8">
+                Turn brand assets into 
+                <span className="block">UGC-style ads.</span>
+                <span className="block text-muted-foreground/60">In minutes.</span>
               </h1>
-              <p className="text-xl sm:text-2xl text-foreground/90 font-medium mb-4">
-                Generate UGC-style ad videos from your brand assets in minutes.
-              </p>
-              <p className="text-lg text-muted-foreground mb-8">
-                Save creative cost and ship more tests. Built for performance marketing agencies in India.
+              <p className="text-xl text-muted-foreground mb-10 max-w-lg mx-auto lg:mx-0">
+                Save creative cost. Ship more tests. Built for performance marketing agencies in India.
               </p>
             </div>
 
@@ -42,34 +35,22 @@ const Hero = ({ onOpenForm }: HeroProps) => {
               <Button variant="heroOutline" size="xl" asChild>
                 <a href="https://calendly.com" target="_blank" rel="noopener noreferrer">
                   <Play className="w-5 h-5" />
-                  Book a 10-minute Demo
+                  Book a Demo
                 </a>
               </Button>
             </div>
 
             {/* Trust badges */}
-            <div className="mt-10 animate-fade-in" style={{ animationDelay: '0.4s' }}>
-              <p className="text-sm text-muted-foreground">
-                <span className="inline-flex items-center gap-2">
-                  <span className="w-2 h-2 bg-primary rounded-full" />
-                  India-first
-                </span>
-                <span className="mx-3 text-border">•</span>
-                <span className="inline-flex items-center gap-2">
-                  <span className="w-2 h-2 bg-primary rounded-full" />
-                  Agency-focused
-                </span>
-                <span className="mx-3 text-border">•</span>
-                <span className="inline-flex items-center gap-2">
-                  <span className="w-2 h-2 bg-primary rounded-full" />
-                  No fake avatars
-                </span>
-                <span className="mx-3 text-border">•</span>
-                <span className="inline-flex items-center gap-2">
-                  <span className="w-2 h-2 bg-primary rounded-full" />
-                  No GPU bills
-                </span>
-              </p>
+            <div className="mt-12 animate-fade-in" style={{ animationDelay: '0.4s' }}>
+              <div className="flex flex-wrap justify-center lg:justify-start gap-x-6 gap-y-2 text-sm text-muted-foreground">
+                <span>India-first</span>
+                <span className="text-border">•</span>
+                <span>Agency-focused</span>
+                <span className="text-border">•</span>
+                <span>No fake avatars</span>
+                <span className="text-border">•</span>
+                <span>No GPU bills</span>
+              </div>
             </div>
           </div>
 
@@ -78,6 +59,12 @@ const Hero = ({ onOpenForm }: HeroProps) => {
             <PhoneMockup />
           </div>
         </div>
+      </div>
+
+      {/* Background pattern */}
+      <div className="absolute inset-0 -z-10">
+        <div className="absolute top-1/4 left-1/4 w-96 h-96 bg-muted/30 rounded-full blur-3xl" />
+        <div className="absolute bottom-1/4 right-1/4 w-80 h-80 bg-muted/20 rounded-full blur-3xl" />
       </div>
     </section>
   );

@@ -7,34 +7,31 @@ const demos = [
     title: "Before → After",
     subtitle: "Product transformation",
     hook: "Used to cost ₹999 — now ₹499",
-    alt: "Hands holding product, text overlay: Used to cost ₹999 — now ₹499",
   },
   {
     id: 2,
     title: "Problem Rant",
     subtitle: "Pattern interrupt",
     hook: "Tired of slow delivery?",
-    alt: "Quick cuts of product in use with bold text: Tired of slow delivery?",
   },
   {
     id: 3,
     title: "Social Proof",
     subtitle: "Trust builder",
     hook: "Thousands served — Riya, Bengaluru",
-    alt: "Badge: Thousands served. Quote: Saved me time & money — Riya, Bengaluru",
   },
 ];
 
 const DemoSection = () => {
   return (
-    <section className="py-20 lg:py-28 bg-secondary/30">
+    <section className="py-24 lg:py-32 bg-muted">
       <div className="section-container">
-        <div className="text-center mb-16">
-          <h2 className="text-3xl sm:text-4xl font-bold mb-4">
-            How It <span className="text-gradient">Looks</span>
+        <div className="text-center mb-20">
+          <h2 className="headline mb-6">
+            How it looks
           </h2>
-          <p className="text-lg text-muted-foreground max-w-2xl mx-auto">
-            Demo ads — sample outputs (placeholders). Each follows proven UGC patterns.
+          <p className="text-xl text-muted-foreground max-w-2xl mx-auto">
+            Sample outputs. Each follows proven UGC patterns.
           </p>
         </div>
 
@@ -42,31 +39,31 @@ const DemoSection = () => {
           {demos.map((demo) => (
             <div key={demo.id} className="group">
               {/* Phone-style container */}
-              <div className="aspect-[9/16] rounded-3xl bg-card border border-border overflow-hidden relative shadow-lg group-hover:shadow-xl transition-shadow">
+              <div className="aspect-[9/16] rounded-3xl bg-background border-2 border-border overflow-hidden relative group-hover:border-foreground transition-colors">
                 {/* Video placeholder */}
-                <div className="absolute inset-0 bg-gradient-to-b from-secondary/50 to-background flex flex-col">
+                <div className="absolute inset-0 flex flex-col">
                   {/* Top label */}
                   <div className="p-4">
-                    <span className="text-xs font-medium text-primary uppercase tracking-wider">
+                    <span className="text-xs font-bold uppercase tracking-wider text-muted-foreground">
                       {demo.subtitle}
                     </span>
                   </div>
 
                   {/* Play overlay */}
                   <div className="flex-1 flex items-center justify-center">
-                    <div className="w-16 h-16 rounded-full bg-primary/20 backdrop-blur-sm flex items-center justify-center group-hover:bg-primary/30 transition-colors cursor-pointer">
-                      <Play className="w-8 h-8 text-primary fill-primary" />
+                    <div className="w-16 h-16 rounded-full bg-foreground flex items-center justify-center group-hover:scale-110 transition-transform cursor-pointer">
+                      <Play className="w-6 h-6 text-background fill-background" />
                     </div>
                   </div>
 
                   {/* Hook text */}
                   <div className="p-4 space-y-3">
-                    <div className="bg-background/90 backdrop-blur-sm rounded-lg p-3 border border-border/50">
-                      <p className="text-sm font-semibold text-foreground">
+                    <div className="bg-foreground text-background rounded-lg p-3">
+                      <p className="text-sm font-bold">
                         "{demo.hook}"
                       </p>
                     </div>
-                    <p className="text-xs text-center text-muted-foreground">
+                    <p className="text-xs text-center text-muted-foreground font-semibold">
                       {demo.title}
                     </p>
                   </div>

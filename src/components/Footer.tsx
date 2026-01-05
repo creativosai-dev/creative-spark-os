@@ -30,11 +30,11 @@ const sources = [
 
 const Footer = () => {
   return (
-    <footer id="sources" className="py-16 bg-secondary/30 border-t border-border">
+    <footer id="sources" className="py-16 bg-foreground text-background">
       <div className="section-container">
         {/* Sources */}
-        <div className="mb-12">
-          <h3 className="text-lg font-semibold mb-6">Sources & References</h3>
+        <div className="mb-16">
+          <h3 className="text-lg font-bold mb-8">Sources & References</h3>
           <div className="grid sm:grid-cols-2 lg:grid-cols-3 gap-4">
             {sources.map((source) => (
               <a
@@ -42,14 +42,14 @@ const Footer = () => {
                 href={source.url}
                 target="_blank"
                 rel="noopener noreferrer"
-                className="flex items-start gap-3 p-4 rounded-lg bg-card border border-border hover:border-primary/30 transition-colors group"
+                className="flex items-start gap-3 p-4 rounded-xl bg-background/5 hover:bg-background/10 transition-colors group"
               >
-                <ExternalLink className="w-4 h-4 text-muted-foreground group-hover:text-primary flex-shrink-0 mt-0.5" />
+                <ExternalLink className="w-4 h-4 text-background/50 group-hover:text-background flex-shrink-0 mt-0.5" />
                 <div>
-                  <p className="text-sm font-medium group-hover:text-primary transition-colors">
+                  <p className="text-sm font-semibold group-hover:underline">
                     {source.label}
                   </p>
-                  <p className="text-xs text-muted-foreground">{source.description}</p>
+                  <p className="text-xs text-background/50">{source.description}</p>
                 </div>
               </a>
             ))}
@@ -57,18 +57,18 @@ const Footer = () => {
         </div>
 
         {/* Bottom */}
-        <div className="flex flex-col sm:flex-row justify-between items-center gap-4 pt-8 border-t border-border">
+        <div className="flex flex-col sm:flex-row justify-between items-center gap-4 pt-8 border-t border-background/20">
           <div className="flex items-center gap-2">
-            <span className="text-xl font-bold text-gradient">CreativOS</span>
+            <span className="text-xl font-black">CreativOS</span>
           </div>
           
-          <p className="text-sm text-muted-foreground text-center sm:text-right">
+          <p className="text-sm text-background/60 text-center sm:text-right">
             We will not share your email. CreativOS is a product by [Your Company Name].
           </p>
         </div>
 
         <div className="mt-8 text-center">
-          <p className="text-xs text-muted-foreground">
+          <p className="text-xs text-background/40">
             © {new Date().getFullYear()} CreativOS. All rights reserved. • creativos.in
           </p>
         </div>

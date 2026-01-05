@@ -20,13 +20,13 @@ const features = [
 
 const WhatWeDo = () => {
   return (
-    <section className="py-20 lg:py-28 bg-background">
+    <section className="py-24 lg:py-32 bg-background border-t border-border">
       <div className="section-container">
-        <div className="text-center mb-16">
-          <h2 className="text-3xl sm:text-4xl font-bold mb-4">
-            What <span className="text-gradient">CreativOS</span> Does
+        <div className="text-center mb-20">
+          <h2 className="headline mb-6">
+            What CreativOS does
           </h2>
-          <p className="text-lg text-muted-foreground max-w-2xl mx-auto">
+          <p className="text-xl text-muted-foreground max-w-2xl mx-auto">
             Turn your brand assets into scroll-stopping UGC-style ads. No fake avatars. No complex editing.
           </p>
         </div>
@@ -35,13 +35,13 @@ const WhatWeDo = () => {
           {features.map((feature, index) => (
             <div
               key={feature.title}
-              className="card-elevated p-8 hover:border-primary/30 transition-all duration-300 group"
+              className="group p-8 rounded-2xl border-2 border-border hover:border-foreground transition-colors duration-200"
               style={{ animationDelay: `${index * 0.1}s` }}
             >
-              <div className="w-14 h-14 rounded-xl bg-primary/10 flex items-center justify-center mb-6 group-hover:bg-primary/20 transition-colors">
-                <feature.icon className="w-7 h-7 text-primary" />
+              <div className="w-14 h-14 rounded-full bg-foreground flex items-center justify-center mb-6">
+                <feature.icon className="w-7 h-7 text-background" />
               </div>
-              <h3 className="text-xl font-semibold mb-3">{feature.title}</h3>
+              <h3 className="text-xl font-bold mb-3">{feature.title}</h3>
               <p className="text-muted-foreground leading-relaxed">
                 {feature.description}
               </p>

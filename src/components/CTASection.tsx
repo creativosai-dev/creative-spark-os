@@ -8,40 +8,34 @@ interface CTASectionProps {
 
 const CTASection = ({ onOpenForm }: CTASectionProps) => {
   return (
-    <section className="py-20 lg:py-28 bg-background">
+    <section className="py-24 lg:py-32 bg-background border-t border-border">
       <div className="section-container">
-        <div className="grid lg:grid-cols-2 gap-12 items-start">
+        <div className="grid lg:grid-cols-2 gap-16 items-start">
           {/* Left - CTA text */}
           <div className="lg:sticky lg:top-24">
-            <h2 className="text-3xl sm:text-4xl font-bold mb-4">
-              Ready to Scale Your <span className="text-gradient">Creative Output</span>?
+            <h2 className="headline mb-6">
+              Ready to scale your creative output?
             </h2>
-            <p className="text-lg text-muted-foreground mb-8">
-              Join India's leading performance agencies already on the waitlist. Get early access and special founding rates.
+            <p className="text-xl text-muted-foreground mb-10">
+              Join India's leading performance agencies. Get early access and founding rates.
             </p>
 
-            <div className="space-y-4">
-              <div className="flex items-center gap-3">
-                <div className="w-8 h-8 rounded-full bg-primary/10 flex items-center justify-center">
-                  <span className="text-primary font-semibold text-sm">1</span>
+            <div className="space-y-4 mb-10">
+              {[
+                "Sign up in 30 seconds",
+                "We'll reach out within 2 business days",
+                "Get exclusive early access",
+              ].map((item, i) => (
+                <div key={item} className="flex items-center gap-4">
+                  <div className="w-10 h-10 rounded-full bg-foreground text-background flex items-center justify-center font-bold">
+                    {i + 1}
+                  </div>
+                  <span className="font-medium">{item}</span>
                 </div>
-                <span className="text-foreground">Sign up in 30 seconds</span>
-              </div>
-              <div className="flex items-center gap-3">
-                <div className="w-8 h-8 rounded-full bg-primary/10 flex items-center justify-center">
-                  <span className="text-primary font-semibold text-sm">2</span>
-                </div>
-                <span className="text-foreground">We'll reach out within 2 business days</span>
-              </div>
-              <div className="flex items-center gap-3">
-                <div className="w-8 h-8 rounded-full bg-primary/10 flex items-center justify-center">
-                  <span className="text-primary font-semibold text-sm">3</span>
-                </div>
-                <span className="text-foreground">Get exclusive early access</span>
-              </div>
+              ))}
             </div>
 
-            <div className="mt-8 lg:hidden">
+            <div className="lg:hidden">
               <Button variant="hero" size="xl" onClick={onOpenForm} className="w-full">
                 Get Early Access
                 <ArrowRight className="w-5 h-5" />
@@ -50,8 +44,8 @@ const CTASection = ({ onOpenForm }: CTASectionProps) => {
           </div>
 
           {/* Right - Inline form */}
-          <div className="card-elevated p-8">
-            <h3 className="text-xl font-semibold mb-6">Get Early Access</h3>
+          <div className="p-8 rounded-2xl border-2 border-foreground">
+            <h3 className="text-xl font-bold mb-6">Get Early Access</h3>
             <LeadForm variant="inline" />
           </div>
         </div>
