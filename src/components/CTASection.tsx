@@ -27,10 +27,10 @@ const CTASection = ({ onOpenForm }: CTASectionProps) => {
                 "Get exclusive early access",
               ].map((item, i) => (
                 <div key={item} className="flex items-center gap-4">
-                  <div className="w-10 h-10 rounded-full bg-foreground text-background flex items-center justify-center font-bold">
+                  <div className="w-10 h-10 rounded-lg bg-primary text-primary-foreground flex items-center justify-center font-bold">
                     {i + 1}
                   </div>
-                  <span className="font-medium">{item}</span>
+                  <span className="font-medium text-foreground">{item}</span>
                 </div>
               ))}
             </div>
@@ -44,8 +44,8 @@ const CTASection = ({ onOpenForm }: CTASectionProps) => {
           </div>
 
           {/* Right - Inline form */}
-          <div className="p-8 rounded-2xl border-2 border-foreground">
-            <h3 className="text-xl font-bold mb-6">Get Early Access</h3>
+          <div className="p-8 rounded-2xl border border-border bg-card">
+            <h3 className="text-xl font-bold mb-6 text-foreground">Get Early Access</h3>
             <LeadForm variant="inline" />
           </div>
         </div>

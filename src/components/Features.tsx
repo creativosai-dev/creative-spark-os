@@ -35,12 +35,12 @@ const Features = () => {
           {features.map((feature) => (
             <div
               key={feature.title}
-              className="text-center"
+              className="text-center p-8 rounded-2xl bg-card border border-border"
             >
-              <div className="text-7xl font-black mb-4">
+              <div className="text-7xl font-black text-primary mb-4">
                 {feature.stat}
               </div>
-              <h3 className="text-xl font-bold mb-2">{feature.title}</h3>
+              <h3 className="text-xl font-bold mb-2 text-foreground">{feature.title}</h3>
               <p className="text-muted-foreground">
                 {feature.description}
               </p>

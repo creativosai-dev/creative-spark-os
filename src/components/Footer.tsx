@@ -1,4 +1,5 @@
 import { ExternalLink } from "lucide-react";
+import logoImage from "@/assets/creativos-logo.jpg";
 
 const sources = [
   {
@@ -30,7 +31,7 @@ const sources = [
 
 const Footer = () => {
   return (
-    <footer id="sources" className="py-16 bg-foreground text-background">
+    <footer id="sources" className="py-16 bg-primary text-primary-foreground">
       <div className="section-container">
         {/* Sources */}
         <div className="mb-16">
@@ -42,14 +43,14 @@ const Footer = () => {
                 href={source.url}
                 target="_blank"
                 rel="noopener noreferrer"
-                className="flex items-start gap-3 p-4 rounded-xl bg-background/5 hover:bg-background/10 transition-colors group"
+                className="flex items-start gap-3 p-4 rounded-xl bg-primary-foreground/10 hover:bg-primary-foreground/20 transition-colors group"
               >
-                <ExternalLink className="w-4 h-4 text-background/50 group-hover:text-background flex-shrink-0 mt-0.5" />
+                <ExternalLink className="w-4 h-4 text-primary-foreground/50 group-hover:text-primary-foreground flex-shrink-0 mt-0.5" />
                 <div>
                   <p className="text-sm font-semibold group-hover:underline">
                     {source.label}
                   </p>
-                  <p className="text-xs text-background/50">{source.description}</p>
+                  <p className="text-xs text-primary-foreground/50">{source.description}</p>
                 </div>
               </a>
             ))}
@@ -57,18 +58,22 @@ const Footer = () => {
         </div>
 
         {/* Bottom */}
-        <div className="flex flex-col sm:flex-row justify-between items-center gap-4 pt-8 border-t border-background/20">
+        <div className="flex flex-col sm:flex-row justify-between items-center gap-4 pt-8 border-t border-primary-foreground/20">
           <div className="flex items-center gap-2">
-            <span className="text-xl font-black">CreativOS</span>
+            <img 
+              src={logoImage} 
+              alt="CreativOS.ai" 
+              className="h-8 w-auto brightness-0 invert"
+            />
           </div>
           
-          <p className="text-sm text-background/60 text-center sm:text-right">
+          <p className="text-sm text-primary-foreground/60 text-center sm:text-right">
             We will not share your email. CreativOS is a product by [Your Company Name].
           </p>
         </div>
 
         <div className="mt-8 text-center">
-          <p className="text-xs text-background/40">
+          <p className="text-xs text-primary-foreground/40">
             © {new Date().getFullYear()} CreativOS. All rights reserved. • creativos.in
           </p>
         </div>

@@ -29,13 +29,13 @@ const steps = [
 
 const HowItWorks = () => {
   return (
-    <section className="py-24 lg:py-32 bg-foreground text-background">
+    <section className="py-24 lg:py-32 bg-primary text-primary-foreground">
       <div className="section-container">
         <div className="text-center mb-20">
           <h2 className="headline mb-6">
             How it works
           </h2>
-          <p className="text-xl text-background/70 max-w-2xl mx-auto">
+          <p className="text-xl text-primary-foreground/70 max-w-2xl mx-auto">
             From brand assets to ad-ready videos in four steps.
           </p>
         </div>
@@ -45,18 +45,18 @@ const HowItWorks = () => {
             <div key={step.step} className="relative text-center">
               {/* Connector line */}
               {index < steps.length - 1 && (
-                <div className="hidden lg:block absolute top-7 left-[calc(50%+2rem)] w-[calc(100%-4rem)] h-px bg-background/20" />
+                <div className="hidden lg:block absolute top-7 left-[calc(50%+2rem)] w-[calc(100%-4rem)] h-px bg-primary-foreground/20" />
               )}
               
               <div className="relative z-10">
-                <div className="w-14 h-14 mx-auto rounded-full bg-background flex items-center justify-center mb-6">
-                  <step.icon className="w-7 h-7 text-foreground" />
+                <div className="w-14 h-14 mx-auto rounded-xl bg-primary-foreground flex items-center justify-center mb-6">
+                  <step.icon className="w-7 h-7 text-primary" />
                 </div>
-                <div className="text-5xl font-black text-background/20 mb-4">
+                <div className="text-5xl font-black text-primary-foreground/20 mb-4">
                   {step.step}
                 </div>
                 <h3 className="text-lg font-bold mb-2">{step.title}</h3>
-                <p className="text-sm text-background/60 leading-relaxed">
+                <p className="text-sm text-primary-foreground/60 leading-relaxed">
                   {step.description}
                 </p>
               </div>
