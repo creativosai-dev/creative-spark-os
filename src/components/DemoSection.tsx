@@ -39,26 +39,26 @@ const DemoSection = () => {
           {demos.map((demo) => (
             <div key={demo.id} className="group">
               {/* Phone-style container */}
-              <div className="aspect-[9/16] rounded-3xl bg-background border-2 border-border overflow-hidden relative group-hover:border-foreground transition-colors">
+              <div className="aspect-[9/16] rounded-3xl bg-card border border-border overflow-hidden relative group-hover:border-primary/50 group-hover:shadow-lg transition-all">
                 {/* Video placeholder */}
                 <div className="absolute inset-0 flex flex-col">
                   {/* Top label */}
                   <div className="p-4">
-                    <span className="text-xs font-bold uppercase tracking-wider text-muted-foreground">
+                    <span className="text-xs font-bold uppercase tracking-wider text-primary">
                       {demo.subtitle}
                     </span>
                   </div>
 
                   {/* Play overlay */}
                   <div className="flex-1 flex items-center justify-center">
-                    <div className="w-16 h-16 rounded-full bg-foreground flex items-center justify-center group-hover:scale-110 transition-transform cursor-pointer">
-                      <Play className="w-6 h-6 text-background fill-background" />
+                    <div className="w-16 h-16 rounded-full bg-primary flex items-center justify-center group-hover:scale-110 transition-transform cursor-pointer">
+                      <Play className="w-6 h-6 text-primary-foreground fill-primary-foreground" />
                     </div>
                   </div>
 
                   {/* Hook text */}
                   <div className="p-4 space-y-3">
-                    <div className="bg-foreground text-background rounded-lg p-3">
+                    <div className="bg-primary text-primary-foreground rounded-lg p-3">
                       <p className="text-sm font-bold">
                         "{demo.hook}"
                       </p>

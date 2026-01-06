@@ -9,14 +9,16 @@ const buttonVariants = cva(
   {
     variants: {
       variant: {
-        default: "bg-primary text-primary-foreground hover:bg-primary/90 rounded-full",
+        default: "bg-primary text-primary-foreground hover:bg-primary/90 rounded-lg",
         destructive: "bg-destructive text-destructive-foreground hover:bg-destructive/90 rounded-lg",
-        outline: "border-2 border-foreground bg-transparent hover:bg-foreground hover:text-background rounded-full",
-        secondary: "bg-secondary text-secondary-foreground hover:bg-secondary/80 rounded-full",
-        ghost: "hover:bg-accent hover:text-accent-foreground rounded-lg",
-        link: "text-foreground underline-offset-4 hover:underline",
-        hero: "bg-primary text-primary-foreground font-bold hover:scale-[1.02] active:scale-[0.98] shadow-lg hover:shadow-xl rounded-full",
-        heroOutline: "border-2 border-foreground bg-transparent text-foreground hover:bg-foreground hover:text-background font-semibold rounded-full",
+        outline: "border-2 border-border bg-transparent hover:bg-muted hover:border-primary rounded-lg",
+        secondary: "bg-secondary text-secondary-foreground hover:bg-secondary/80 rounded-lg",
+        ghost: "hover:bg-muted hover:text-foreground rounded-lg",
+        link: "text-primary underline-offset-4 hover:underline",
+        // CTA button - Burnt Orange accent
+        hero: "bg-accent text-accent-foreground font-bold hover:brightness-110 active:brightness-95 shadow-lg hover:shadow-xl rounded-lg",
+        // Outline with primary color
+        heroOutline: "border-2 border-primary bg-transparent text-primary hover:bg-primary hover:text-primary-foreground font-semibold rounded-lg",
       },
       size: {
         default: "h-11 px-6 py-2",

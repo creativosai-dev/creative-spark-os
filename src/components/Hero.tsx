@@ -14,13 +14,13 @@ const Hero = ({ onOpenForm }: HeroProps) => {
           {/* Left content */}
           <div className="flex-1 text-center lg:text-left max-w-2xl">
             <div className="animate-fade-in">
-              <p className="text-sm font-semibold uppercase tracking-widest text-muted-foreground mb-6">
+              <p className="text-sm font-semibold uppercase tracking-widest text-primary mb-6">
                 The Creative OS for Agencies
               </p>
               <h1 className="display-text mb-8">
                 Turn brand assets into 
-                <span className="block">UGC-style ads.</span>
-                <span className="block text-muted-foreground/60">In minutes.</span>
+                <span className="block text-primary">UGC-style ads.</span>
+                <span className="block text-muted-foreground">In minutes.</span>
               </h1>
               <p className="text-xl text-muted-foreground mb-10 max-w-lg mx-auto lg:mx-0">
                 Save creative cost. Ship more tests. Built for performance marketing agencies in India.
@@ -63,8 +63,8 @@ const Hero = ({ onOpenForm }: HeroProps) => {
 
       {/* Background pattern */}
       <div className="absolute inset-0 -z-10">
-        <div className="absolute top-1/4 left-1/4 w-96 h-96 bg-muted/30 rounded-full blur-3xl" />
-        <div className="absolute bottom-1/4 right-1/4 w-80 h-80 bg-muted/20 rounded-full blur-3xl" />
+        <div className="absolute top-1/4 left-1/4 w-96 h-96 bg-primary/5 rounded-full blur-3xl" />
+        <div className="absolute bottom-1/4 right-1/4 w-80 h-80 bg-accent/5 rounded-full blur-3xl" />
       </div>
     </section>
   );
